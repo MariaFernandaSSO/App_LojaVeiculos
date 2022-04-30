@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <div [routerLink]="['/home']">
+      <ion-icon name="arrow-back-outline" class="size"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h3 class="ion-text-center posicao">Cadastre-se</h3>
+  <div>
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Nome:</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Email:</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-margin-bottom">
+      <ion-label position="floating">Senha:</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+  </div>
+  <div class="posicaoBotao">
+    <ion-button type="submit" expand="block" [routerLink]="['/veiculos']" color="success">Cadastrar</ion-button>
+  </div>
+</ion-content>

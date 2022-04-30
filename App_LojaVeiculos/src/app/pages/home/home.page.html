@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button  class="sizemenu"></ion-menu-button>
+    </ion-buttons>
+    <ion-toolbar>
+      <ion-searchbar></ion-searchbar>
+    </ion-toolbar>
+
+     <ion-buttons slot="end">
+          <ion-button>
+            <a href="compras"><ion-icon name="cart-outline" class="size"></ion-icon></a>
+          </ion-button>
+        </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-card class="img">
+    <div>
+      <ion-card-header class="ion-margin-top">
+      <span class="texto">Procurando carros? Compre aqui</span>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button class="ion-margin-top" [routerLink]="['/veiculos']">veja o catálogo</ion-button>
+    </ion-card-content>
+    </div>
+  </ion-card>
+
+  <div class="ion-text-center posicao2">
+    <h4>Recomendados para você</h4>
+  </div>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <div class="slide">
+        <ion-card>
+            <img src="{{carros[0].img}}">
+          <ion-card-content>
+            <ion-card-title>{{carros[0].title}}</ion-card-title>
+            <p class="text">{{carros[0].desc}}</p>
+            <p class="textPreco">{{carros[0].preco}}</p>
+            <ion-button class="ion-margin-top"  expand="block" fill="outline" color="dark"  [routerLink]="['/detalhes/{{carros[0].indice}}']" >VER OFERTA</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <ion-card>
+          <img src="{{carros[1].img}}">
+        <ion-card-content>
+          <ion-card-title>{{carros[1].title}}</ion-card-title>
+          <p class="text">{{carros[1].desc}}</p>
+          <p class="textPreco">{{carros[1].preco}}</p>
+          <ion-button class="ion-margin-top"  expand="block" fill="outline" color="dark"  [routerLink]="['/detalhes/{{carros[1].indice}}']">VER OFERTA</ion-button>
+        </ion-card-content>
+      </ion-card>
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <ion-card>
+          <img src="{{carros[2].img}}">
+        <ion-card-content>
+          <ion-card-title>{{carros[2].title}}</ion-card-title>
+          <p class="text">{{carros[2].desc}}</p>
+          <p class="textPreco">{{carros[2].preco}}</p>
+          <ion-button class="ion-margin-top"  expand="block" fill="outline" color="dark"  [routerLink]="['/detalhes/{{carros[2].indice}}']">VER OFERTA</ion-button>
+        </ion-card-content>
+      </ion-card>
+      </div>
+
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+
+
+
+
+

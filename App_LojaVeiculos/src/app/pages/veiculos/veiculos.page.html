@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button  class="sizemenu"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-toolbar>
+      <ion-searchbar></ion-searchbar>
+    </ion-toolbar>
+
+     <ion-buttons slot="end">
+          <ion-button>
+            <a href="compras"><ion-icon name="cart-outline" class="size"></ion-icon></a>
+          </ion-button>
+        </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let c of carros; let i = index">
+    <ion-card-header>
+     <img [src]="c.img" alt="">
+      <ion-card-title>{{ c.title }}</ion-card-title>
+      <p class="text">{{c.desc}}</p>
+      <p class="textPreco">{{ c.preco }}</p>
+      <ion-button expand="block" fill="outline" color="dark"  [routerLink]="['/detalhes']">VER OFERTA</ion-button>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
